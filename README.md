@@ -4,4 +4,4 @@
 
 ### Screenshot
 
-https://i.imgur.com/GLi58nV.png
+![Screenshot](https://i.imgur.com/GLi58nV.png)
