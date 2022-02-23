@@ -1,0 +1,46 @@
+{
+  "name": "jumia-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.7",
+    "axios": "^0.21.4",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.0.7",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "devStart2": "nodemon refresher.js",
+    "dev": "concurrently \"npm run devStart\" \"npm run devStart2\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13"
+  }
+}
