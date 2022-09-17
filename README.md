@@ -1,4 +1,4 @@
-### Checkout my website that I made for tracking prices of products in Jumia.ma 
+### Checkout my website that I made for tracking product prices in Jumia.ma 
 
 [https://jumia-price-tracker.herokuapp.com/](https://jumia-price-tracker.herokuapp.com/)
 
