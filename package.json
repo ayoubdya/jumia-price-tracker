@@ -18,7 +18,7 @@
     "dev1": "nodemon server.js",
     "dev2": "nodemon refresher.js",
     "dev": "concurrently \"nodemon server.js\" \"nodemon refresher.js\"",
-    "build": "sed -i -E 's/(NODE_ENV)=\\w+/\\1=production/' .env client/.env && pnpm install --prod && pnpm --prod --prefix client install && pnpm --prefix client run build",
+    "build": "pnpm install --prod && pnpm --prod --prefix client install && pnpm --prefix client run build",
     "start": "node server.js & node refresher.js"
   },
   "eslintConfig": {
