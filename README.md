@@ -1,6 +1,8 @@
 ### Checkout my website that I made for tracking product prices in Jumia.ma 
 
-[https://jumia-price-tracker.herokuapp.com/](https://jumia-price-tracker.herokuapp.com/)
+[https://jumia.up.railway.app/](https://jumia.up.railway.app/)
+
+[https://jumia.onrender.com/](https://jumia.onrender.com/)
 
 ### Screenshot
 
