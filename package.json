@@ -3,23 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sendgrid/mail": "^7.4.7",
-    "axios": "^0.21.4",
-    "concurrently": "^6.3.0",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.2.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "firebase-admin": "^10.0.0",
-    "helmet": "^4.6.0",
-    "mongoose": "^6.0.7",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "helmet": "^6.0.1",
+    "mongoose": "^6.8.4",
     "morgan": "^1.10.0",
-    "path": "^0.12.7",
-    "web-vitals": "^1.1.2"
+    "path": "^0.12.7"
+    
   },
   "scripts": {
-    "devStart": "nodemon server.js",
-    "devStart2": "nodemon refresher.js",
-    "dev": "concurrently \"npm run devStart\" \"npm run devStart2\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev1": "nodemon server.js",
+    "dev2": "nodemon refresher.js",
+    "dev": "concurrently \"nodemon server.js\" \"nodemon refresher.js\"",
+    "build": "sed -i -E 's/(NODE_ENV)=\\w+/\\1=production/' .env client/.env && pnpm install --prod && pnpm --prod --prefix client install && pnpm --prefix client run build",
+    "start": "node server.js & node refresher.js"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +40,8 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^10.0.0",
-    "nodemon": "^2.0.13"
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
   }
 }
